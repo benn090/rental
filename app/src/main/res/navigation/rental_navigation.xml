@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rental_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <fragment
+        android:id="@+id/mainActivity"
+        android:name="ca.dal.cs.csci4176.rental.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ca.dal.cs.csci4176.rental.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/loginActivity"
+        android:name="ca.dal.cs.csci4176.rental.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" >
+        <action
+            android:id="@+id/action_loginActivity_to_registerActivity"
+            app:destination="@id/registerActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerActivity"
+        android:name="ca.dal.cs.csci4176.rental.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <fragment
+        android:id="@+id/exampleFragment"
+        android:name="ca.dal.cs.csci4176.rental.ExampleFragment"
+        android:label="fragment_example"
+        tools:layout="@layout/fragment_example" >
+        <action
+            android:id="@+id/action_exampleFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
